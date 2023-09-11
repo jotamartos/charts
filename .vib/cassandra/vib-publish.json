@@ -48,6 +48,9 @@
               "pod": {
                 "workload": "sts-cassandra"
               }
+            },
+            "wait": {
+              "file": "cassandra/goss/goss-wait.yaml"
             }
           }
         },
