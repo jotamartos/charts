@@ -7,6 +7,6 @@ command:
   # leading to false positives. This ensures some time has passed before proceeding with
   # the tests, increasing the resiliency.
   wait-to-be-available:
-    exec: "sleep 600"
+    exec: "sleep 300"
     exit-status: 0
-    timeout: 610000
+    timeout: 310000
