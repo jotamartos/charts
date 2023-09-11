@@ -48,21 +48,9 @@
               "pod": {
                 "workload": "sts-cassandra"
               }
-            }
-          }
-        },
-        {
-          "action_id": "ginkgo",
-          "params": {
-            "resources": {
-              "path": "/.vib/cassandra/ginkgo"
             },
-            "params": {
-              "kubeconfig": "{{kubeconfig}}",
-              "namespace": "{{namespace}}",
-              "name": "cassandra",
-              "username": "test_cassandra",
-              "password": "ComplicatedPassword123!4"
+            "wait": {
+              "file": "cassandra/goss/goss-wait.yaml"
             }
           }
         }
