@@ -670,6 +670,17 @@ autoscaling:
 ## @param postgresql.architecture PostgreSQL architecture (`standalone` or `replication`)
 ##
 postgresql:
+  ## @param postgresql.image.registry Testing
+  ## @param postgresql.image.repository Testing
+  ## @param postgresql.image.tag Testing
+  ## @param postgresql.image.digest Testing
+  ## @param postgresql.image.pullPolicy Testing
+  image:
+    registry: docker.io
+    repository: bitnami/postgresql
+    tag: 16.0.0-debian-11-r0
+    digest: ""
+    pullPolicy: IfNotPresent
   enabled: true
   auth:
     username: bn_odoo
