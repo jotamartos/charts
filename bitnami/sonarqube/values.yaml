@@ -1008,6 +1008,17 @@ metrics:
 ## https://github.com/bitnami/charts/blob/main/bitnami/postgresql/values.yaml
 ##
 postgresql:
+  ## @param postgresql.image.registry Testing
+  ## @param postgresql.image.repository Testing
+  ## @param postgresql.image.tag Testing
+  ## @param postgresql.image.digest Testing
+  ## @param postgresql.image.pullPolicy Testing
+  image:
+    registry: docker.io
+    repository: bitnami/postgresql
+    tag: 16.0.0-debian-11-r0
+    digest: ""
+    pullPolicy: IfNotPresent
   ## @param postgresql.enabled Deploy PostgreSQL subchart
   ##
   enabled: true
