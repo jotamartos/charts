@@ -31,7 +31,7 @@ jobs:
         run: |
           # Download published asset
           mkdir download
-          curl -o download/kube-prometheus-9.0.8.tgz https://charts.bitnami.com/bitnami/kube-prometheus-9.0.8.tgz
+          curl -o download/kube-prometheus-9.0.8.tgz https://charts.bitnami.com/bitnami/harbor-21.1.4.tgz
 
           cd index
           git config user.name "Bitnami Containers"
