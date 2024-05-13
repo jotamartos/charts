@@ -47,7 +47,6 @@ jobs:
             # Rebuild index
             helm repo index --url https://charts.bitnami.com/bitnami --merge bitnami/index.yaml ../download
             cp ../download/index.yaml bitnami/index.yaml
-            cat bitnami/index.yaml
             # Push changes
             git add bitnami/index.yaml && git commit -s --amend --no-edit
             git log
