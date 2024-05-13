@@ -33,9 +33,6 @@ jobs:
           curl -o download/kube-prometheus-9.0.8.tgz https://charts.bitnami.com/bitnami/kube-prometheus-9.0.8.tgz
 
           cd index
-          git config user.name "Bitnami Containers"
-          git config user.email "bitnami-bot@vmware.com"
-
           attempts=0
           max_attempts=5
           is_index_updated=0
