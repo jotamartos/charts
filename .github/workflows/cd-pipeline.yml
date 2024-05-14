@@ -31,7 +31,7 @@ jobs:
         run: |
           # Download published asset
           mkdir download
-          curl -LJO --output-dir download/ https://charts.bitnami.com/bitnami/gitea-2.1.0.tgz
+          curl -LJO --output-dir download/ https://charts.bitnami.com/bitnami/milvus-7.0.2.tgz
 
           cd index
           git config user.name "Bitnami Containers"
