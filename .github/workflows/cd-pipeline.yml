@@ -45,6 +45,8 @@ jobs:
             attempts=$((attempts + 1))
             git fetch origin index
             current_commit_id=$(git rev-parse origin/index)
+            echo "sleeping"
+            sleep 30
             git reset --hard $(git commit-tree origin/index^{tree} -m "Update index.yaml")
 
             # Rebuild index
