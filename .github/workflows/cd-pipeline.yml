@@ -22,6 +22,7 @@ jobs:
         with:
           ref: 'index'
           path: index
+          token: ${{ secrets.BITNAMI_BOT_TOKEN }}
       - name: Install helm
         run: |
           HELM_TARBALL="helm-v3.8.1-linux-amd64.tar.gz"
@@ -31,7 +32,7 @@ jobs:
         run: |
           # Download published asset
           mkdir download
-          curl -LJO --output-dir download/ https://charts.bitnami.com/bitnami/milvus-7.0.2.tgz
+          curl -LJO --output-dir download/ https://charts.bitnami.com/bitnami/tomcat-11.0.4.tgz
 
           cd index
           git config user.name "Bitnami Containers"
