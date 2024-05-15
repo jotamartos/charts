@@ -32,7 +32,7 @@ jobs:
         run: |
           # Download published asset
           mkdir download
-          curl -LJO --output-dir download/ https://charts.bitnami.com/bitnami/argo-workflows-8.0.9.tgz
+          curl -LJO --output-dir download/ https://charts.bitnami.com/bitnami/etcd-10.0.9.tgz
 
           cd index
           git config user.name "Bitnami Containers"
