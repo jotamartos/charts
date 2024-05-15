@@ -48,6 +48,13 @@ jobs:
 
             # Rebuild index
             helm repo index --url https://charts.bitnami.com/bitnami --merge bitnami/index.yaml ../download
+            # Compare sizes of files
+            stat -c%s bitnami/index.yaml
+            stat -c%s ../download/index.yaml
+            if [[ $(stat -c%s bitnami/index.yaml) -lt $(stat -c%s ../download/index.yaml) ]]; then
+              echo "Everything is correct"
+              exit 1
+            fi
             cp ../download/index.yaml bitnami/index.yaml
             # Push changes
             git add bitnami/index.yaml && git commit -m "Update index.yaml" -s
