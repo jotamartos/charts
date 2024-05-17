@@ -53,7 +53,7 @@ jobs:
             # Compare sizes of files
             stat -c%s bitnami/index.yaml
             stat -c%s ../download/index.yaml
-            if [[ $(stat -c%s bitnami/index.yaml) -lt $(stat -c%s ../download/index.yaml) ]]; then
+            if [[ $(stat -c%s bitnami/index.yaml) -gt $(stat -c%s ../download/index.yaml) ]]; then
               echo "Everything is correct"
               exit 1
             fi
